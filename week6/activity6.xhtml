@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Form Reservasi Hotel</title>
+
+  <style type="text/css">
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fffde7);
+      color: #333;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004d66;
+      text-shadow: 1px 1px 2px #a0a0a0;
+      letter-spacing: 1px;
+    }
+
+    form {
+      width: 600px;
+      margin: 0 auto;
+      background: #ffffffcc;
+      border: 2px solid #007799;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 100, 150, 0.3);
+      animation: fadeIn 1s ease-in;
+    }
+
+    fieldset {
+      border: 2px solid #00a0b0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f8ffff;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #006680;
+      background: #e0f7fa;
+      padding: 4px 10px;
+      border-radius: 5px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 95%;
+      padding: 7px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: #00a0b0;
+      background-color: #f0fdfd;
+      outline: none;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #0088aa;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005f73;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 95, 115, 0.5);
+    }
+
+    .ornamen {
+      text-align: center;
+      color: #006680;
+      font-size: 22px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .ornamen::before,
+    .ornamen::after {
+      content: "🌿 ✦ 🌸 ✦ 🌿";
+      display: block;
+      color: #00a0b0;
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ornamen">Selamat Datang di Form Reservasi Hotel</div>
+
+  <h1>Reservation Hotel Room</h1>
+
+  <form action="" method="post">
+
+    <fieldset>
+      <legend>Personal Data</legend>
+      <p>1. Name<br />
+        <input type="text" id="name" name="name" size="30" />
+      </p>
+      <p>2. Gender<br />
+        <input type="text" id="gender" name="gender" size="30" />
+      </p>
+      <p>3. Email Address<br />
+        <input type="text" id="email" name="email" size="30" />
+      </p>
+      <p>4. Telp Number<br />
+        <input type="text" id="telp" name="telp" size="30" />
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Reservation Room Form</legend>
+      <p>1. Reservation Name<br />
+        <input type="text" id="res_name" name="res_name" size="30" />
+      </p>
+      <p>2. Booking date<br />
+        <input type="text" id="booking_date" name="booking_date" size="30" />
+      </p>
+      <p>3. Room Type<br />
+        <select id="room_type" name="room_type">
+          <option value="deluxe">Deluxe</option>
+          <option value="standard">Standard</option>
+        </select>
+      </p>
+      <p>4. Bed Type<br />
+        <select id="bed_type" name="bed_type">
+          <option value="single">Single bed</option>
+          <option value="double">Double bed</option>
+        </select>
+      </p>
+      <p>5. Breakfast<br />
+        <input type="radio" id="with_breakfast" name="breakfast" value="With" /> <label for="with_breakfast">With
+          Breakfast</label>
+        <input type="radio" id="without_breakfast" name="breakfast" value="Without" /> <label
+          for="without_breakfast">Without Breakfast</label>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Payment</legend>
+      <p>1. Check in date<br />
+        <input type="text" id="check_in" name="check_in" size="30" />
+      </p>
+      <p>2. Check out date<br />
+        <input type="text" id="check_out" name="check_out" size="30" />
+      </p>
+      <p>3. Payment Method<br />
+        <select id="payment_method" name="payment_method">
+          <option value="cash">Cash</option>
+          <option value="credit_card">Credit Card</option>
+        </select>
+      </p>
+    </fieldset>
+
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>
